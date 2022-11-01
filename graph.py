@@ -19,7 +19,7 @@ class Graph:
             currNode = queue[0] 
 
             if currNode.val == val:
-                return f'{currNode.val} found in {steps} steps from the head!'
+                return f'{currNode.val} found in {steps} steps from {start.val}!'
 
             queue = queue[1:] + currNode.neighbors
             steps += 1
@@ -32,4 +32,4 @@ node5 = Node(5, [node4])
 
 graph = Graph(node5)
 
-print(graph.bfs(10))
+print(graph.bfs(1))
